@@ -20,9 +20,8 @@
 		"build": "tsc",
 		"package": "ncc build --minify --source-map --license licenses.txt",
 		"test": "jest",
-		"tidy": "run-s 'format:fix' 'lint:fix'",
 		"typecheck": "tsc -b",
-		"validate": "rimraf dist && run-s 'tidy' 'build' 'test' 'package'",
+		"validate": "rimraf dist && run-s 'biome:all' 'build' 'test' 'package'",
 		"up:install": "taze major --install && pnpm taze -w && pnpm i",
 		"up": "taze major"
 	},
