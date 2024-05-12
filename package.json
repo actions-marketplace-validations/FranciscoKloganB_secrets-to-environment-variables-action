@@ -15,7 +15,7 @@
 	},
 	"scripts": {
 		"biome:all": "biome check --apply-unsafe --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true --no-errors-on-unmatched .",
-		"biome:check": "biome check --apply --changed --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true --no-errors-on-unmatched .",
+		"biome:precommit": "biome check --apply --changed --formatter-enabled=true --linter-enabled=true --organize-imports-enabled=true --no-errors-on-unmatched .",
 		"biome:ci": "biome ci --no-errors-on-unmatched .",
 		"build": "tsc",
 		"package": "ncc build --minify --source-map --license licenses.txt",
