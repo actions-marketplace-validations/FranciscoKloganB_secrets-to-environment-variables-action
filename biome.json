@@ -1,0 +1,51 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.7.2/schema.json",
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"include": [
+			".vscode",
+			"src",
+			"biome.json",
+			"jest.config.js",
+			"package.json",
+			"tsconfig.tools.json",
+			"commitlint.config.js",
+			"tsconfig.json",
+			"tsconfig.spec.json",
+			"README.md"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"attributePosition": "auto",
+			"bracketSameLine": false,
+			"bracketSpacing": true,
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "preserve",
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"trailingComma": "all"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": true
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	}
+}
