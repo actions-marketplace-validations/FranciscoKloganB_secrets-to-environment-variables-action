@@ -31,7 +31,7 @@ _Note the `secrets` key. It is **mandatory** so the action can read and export t
 
 ```yaml
 steps:
-- uses: actions/checkout@v3
+- uses: actions/checkout@v4
 - uses: franciscokloganb/secrets-to-environment-variables-action@v1
   with:
     secrets: ${{ toJSON(secrets) }}
@@ -44,7 +44,7 @@ Exclude defined secret(s) from list of secrets (comma separated, supports regex)
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-env-action@v1
     with:
       exclude: DUMMY_.+
@@ -56,7 +56,7 @@ steps:
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-environment-variables-action@v1
     with:
       include: MY_SECRET, MY_OTHER_SECRETS_*
@@ -76,7 +76,7 @@ It is possible to add and remove prefixes and suffixes from all the secrets foun
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-environment-variables-action@v1
     with:
       add-prefix: PREFIX_
@@ -88,7 +88,7 @@ steps:
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-environment-variables-action@v1
     with:
       add-suffix: _SUFFIX
@@ -102,7 +102,7 @@ Remove a prefix to all exported secrets, if present.
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-environment-variables-action@v1
     with:
       remove-prefix: PREFIX_
@@ -116,7 +116,7 @@ Remove a prefix to all exported secrets, if present.
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-environment-variables-action@v1
     with:
       remove-suffix: _SUFFIX
@@ -130,7 +130,7 @@ steps:
 env:
   MY_SECRET: DONT_OVERRIDE
 steps:
-- uses: actions/checkout@v3
+- uses: actions/checkout@v4
 - uses: franciscokloganb/secrets-to-environment-variables-action@v1
   with:
     override: true
@@ -144,7 +144,7 @@ Converts all exported secrets case to `lower` or `upper`. Default is `upper`.
 
 ```yaml
 steps:
-  - uses: actions/checkout@v3
+  - uses: actions/checkout@v4
   - uses: franciscokloganb/secrets-to-environment-variables-action@v1
     with:
       convert: lower
